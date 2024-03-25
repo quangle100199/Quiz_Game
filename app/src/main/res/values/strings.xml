@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Quiz Game</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="don_t_you_have_an_account_yet">Don\'t you have an account yet?</string>
+    <string name="sign_up"><u><b>Sign up</b></u></string>
+    <string name="forgot_password"><u>I forgot my password</u></string>
+    <string name="title">MyQuizGame</string>
+    <string name="your_web_client_id">29906338920-h90h6ds5iv6rrbde50d07pcvg4cgc0an.apps.googleusercontent.com</string>
+
+</resources>
