@@ -4,13 +4,13 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.quizgame.model.Question
-import com.example.quizgame.repository.QuestionRepository
+import com.example.quizgame.data.Question
+import com.example.quizgame.repository.implementation.QuestionRepository
 
 class QuestionViewModel : ViewModel(){
 
-    private var _questionMutableLiveData: MutableLiveData<List<Question>> = MutableLiveData()
-    val questionMutableLiveData : LiveData<List<Question>> get() = _questionMutableLiveData
+    private var _questionMutableLiveData: MutableLiveData<List<Question>?> = MutableLiveData()
+    val questionMutableLiveData : MutableLiveData<List<Question>?> get() = _questionMutableLiveData
 
     private var repository : QuestionRepository = QuestionRepository()
     private var currentIndexQuestion : Int = 0

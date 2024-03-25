@@ -4,7 +4,9 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.quizgame.repository.AuthRepository
+import androidx.lifecycle.ViewModel
+import com.example.quizgame.repository.implementation.AuthRepository
+import com.example.quizgame.repository.implementation.GoogleAuthRepository
 import com.google.firebase.auth.FirebaseUser
 
 class AuthViewModel(application: Application) : AndroidViewModel(application) { // chứa ngữ cảnh của ứng dụng
@@ -55,5 +57,18 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) { 
 
     fun sendEmailToResetPassword(email: String) {
         repository.sendEmailToResetPassword(email)
+    }
+}
+
+class GoogleAuthViewModel : ViewModel(){
+
+    private val _signInSuccessLiveData : MutableLiveData<Boolean> = MutableLiveData()
+    val signInSuccessLiveData : LiveData<Boolean> get() = _signInSuccessLiveData
+    private val googleAuthRepository : GoogleAuthRepository = GoogleAuthRepository()
+
+    fun signInWithGoogle(idToken : String){
+        googleAuthRepository.signInWithGoogle(idToken) { isSuccess ->
+            _signInSuccessLiveData.postValue(isSuccess)
+        }
     }
 }

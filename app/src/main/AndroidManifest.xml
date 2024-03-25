@@ -13,25 +13,10 @@
         android:theme="@style/Theme.QuizGame"
         tools:targetApi="31">
         <activity
-            android:name=".view.ForgotPasswordActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.ResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.QuestionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.HomePageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.SignUpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.MainActivity"
+            android:name=".ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

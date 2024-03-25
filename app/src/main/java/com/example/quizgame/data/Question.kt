@@ -1,4 +1,4 @@
-package com.example.quizgame.model
+package com.example.quizgame.data
 
 data class Question(
     val answer: String = "",

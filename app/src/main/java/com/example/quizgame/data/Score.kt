@@ -1,4 +1,4 @@
-package com.example.quizgame.model
+package com.example.quizgame.data
 
 import android.os.Parcel
 import android.os.Parcelable

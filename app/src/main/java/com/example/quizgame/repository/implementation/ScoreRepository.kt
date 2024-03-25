@@ -1,16 +1,17 @@
-package com.example.quizgame.repository
+package com.example.quizgame.repository.implementation
 
 import android.util.Log
-import com.example.quizgame.model.Score
+import com.example.quizgame.data.Score
+import com.example.quizgame.repository.ScoreRepositor
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class ScoreRepository {
+class ScoreRepository : ScoreRepositor {
     private val db : FirebaseFirestore = Firebase.firestore
 
     // send data to firebase
-    fun sendScore(score : Score){
+    override fun sendScore(score : Score){
         val _score = hashMapOf(
             "correct" to score.correctNum,
             "wrong" to score.incorrectNum

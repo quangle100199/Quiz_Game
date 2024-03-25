@@ -6,5 +6,7 @@
     <string name="forgot_password"><u>I forgot my password</u></string>
     <string name="title">MyQuizGame</string>
     <string name="your_web_client_id">29906338920-h90h6ds5iv6rrbde50d07pcvg4cgc0an.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

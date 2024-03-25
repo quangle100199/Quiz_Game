@@ -1,26 +1,27 @@
-package com.example.quizgame.repository
+package com.example.quizgame.repository.implementation
 
 import android.util.Log
-import com.example.quizgame.model.Question
+import com.example.quizgame.data.Question
+import com.example.quizgame.repository.QuestionRepositor
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class QuestionRepository {
+class QuestionRepository : QuestionRepositor {
     private val firebaseFireStore : FirebaseFirestore = Firebase.firestore
     private var _questionNum : Int? = null
     private lateinit var _listQuestion: MutableList<Question>
 
-    fun getQuestionNum(): Int?{
+    override fun getQuestionNum(): Int?{
         return _questionNum
     }
 
-    fun addQuestion(question: Question){
+    override fun addQuestion(question: Question){
         firebaseFireStore.collection("question").add(question)
         Log.i("QuangLM12", "Check")
     }
 
-    fun getQuestions(onQuestionLoad: (MutableList<Question>?) -> Unit){
+    override fun getQuestions(onQuestionLoad: (MutableList<Question>?) -> Unit){
         _listQuestion = mutableListOf()
         firebaseFireStore.collection("question").get()
             .addOnSuccessListener { listQuestion ->

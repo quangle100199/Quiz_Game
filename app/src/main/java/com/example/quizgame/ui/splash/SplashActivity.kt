@@ -1,4 +1,4 @@
-package com.example.quizgame.view
+package com.example.quizgame.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,9 +6,10 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.quizgame.R
+import com.example.quizgame.ui.MainActivity
 import com.example.quizgame.viewmodel.AuthViewModel
 
-class MainActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
     private lateinit var viewModel: AuthViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,12 +22,12 @@ class MainActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             if (viewModel.currentUserLiveData != null) {
-                startActivity(Intent(this, HomePageActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
             } else {
-                startActivity(Intent(this, LoginActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
             }
             finish()
-        }, 1000)
+        }, 3000)
 
     }
 }
