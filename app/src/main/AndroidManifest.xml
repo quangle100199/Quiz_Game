@@ -13,10 +13,10 @@
         android:theme="@style/Theme.QuizGame"
         tools:targetApi="31" >
         <activity
-            android:name=".ui.HomeNavigationActivity"
+            android:name=".ui.home.HomeNavigationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.AuthNavigationActivity"
+            android:name=".ui.auth.AuthNavigationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.splash.SplashActivity"

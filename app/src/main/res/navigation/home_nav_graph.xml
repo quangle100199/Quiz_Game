@@ -36,7 +36,7 @@
 
     <activity
         android:id="@+id/authNavigationActivity"
-        android:name="com.example.quizgame.ui.AuthNavigationActivity"
+        android:name="com.example.quizgame.ui.auth.AuthNavigationActivity"
         android:label="activity_main2"
         tools:layout="@layout/activity_main2">
     </activity>

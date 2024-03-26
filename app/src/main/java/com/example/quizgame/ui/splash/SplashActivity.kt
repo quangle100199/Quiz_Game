@@ -6,8 +6,8 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.quizgame.R
-import com.example.quizgame.ui.AuthNavigationActivity
-import com.example.quizgame.ui.HomeNavigationActivity
+import com.example.quizgame.ui.auth.AuthNavigationActivity
+import com.example.quizgame.ui.home.HomeNavigationActivity
 import com.example.quizgame.viewmodel.AuthViewModel
 
 class SplashActivity : AppCompatActivity() {

@@ -43,7 +43,7 @@
 
     <activity
         android:id="@+id/homeNavigationActivity"
-        android:name="com.example.quizgame.ui.HomeNavigationActivity"
+        android:name="com.example.quizgame.ui.home.HomeNavigationActivity"
         android:label="activity_home_navigation"
         tools:layout="@layout/activity_home_navigation">
     </activity>

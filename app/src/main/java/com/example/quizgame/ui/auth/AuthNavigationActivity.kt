@@ -1,4 +1,4 @@
-package com.example.quizgame.ui
+package com.example.quizgame.ui.auth
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.example.quizgame.ui
+package com.example.quizgame.ui.home
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
