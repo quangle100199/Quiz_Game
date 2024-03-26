@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -21,7 +23,7 @@ import com.google.android.gms.common.api.ApiException
 
 class LoginFragment : Fragment() {
     private lateinit var mFragmentLoginBinding : FragmentLoginBinding
-    private lateinit var viewModel: AuthViewModel
+    private val viewModel: AuthViewModel by viewModels()
     private lateinit var googleAuthViewModel: GoogleAuthViewModel
     private lateinit var navController: NavController
 
@@ -29,7 +31,7 @@ class LoginFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this)[AuthViewModel::class.java]
+//        viewModel = ViewModelProvider(this)[AuthViewModel::class.java]
         googleAuthViewModel = ViewModelProvider(this)[GoogleAuthViewModel::class.java]
     }
 
@@ -60,7 +62,7 @@ class LoginFragment : Fragment() {
                     currentUserLiveData.apply {
                         observe(viewLifecycleOwner) {
                             if (it != null) {
-                                navController.navigate(R.id.action_loginFragment_to_homepageFragment)
+                                navController.navigate(R.id.action_loginFragment_to_homeNavigationActivity)
                             }
                         }
                     }

@@ -1,6 +1,7 @@
 package com.example.quizgame.viewmodel
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,6 +18,16 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) { 
 
     private var _errorMessageLiveData: MutableLiveData<String> = MutableLiveData()
     val errorMessageLiveData: LiveData<String> = _errorMessageLiveData
+
+    init {
+        Log.d("VMcheck", "VM created")
+    }
+
+    override fun onCleared() {
+        Log.d("VMcheck", "VM cleared")
+
+        super.onCleared()
+    }
 
     fun signUp(email: String, password: String) {
         repository.signUp(

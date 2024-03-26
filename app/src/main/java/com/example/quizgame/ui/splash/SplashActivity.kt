@@ -6,7 +6,8 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.quizgame.R
-import com.example.quizgame.ui.MainActivity
+import com.example.quizgame.ui.AuthNavigationActivity
+import com.example.quizgame.ui.HomeNavigationActivity
 import com.example.quizgame.viewmodel.AuthViewModel
 
 class SplashActivity : AppCompatActivity() {
@@ -22,9 +23,9 @@ class SplashActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             if (viewModel.currentUserLiveData != null) {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, HomeNavigationActivity::class.java))
             } else {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, AuthNavigationActivity::class.java))
             }
             finish()
         }, 3000)

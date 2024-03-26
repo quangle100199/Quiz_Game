@@ -11,14 +11,14 @@
         android:label="fragment_log_in"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_homepageFragment"
-            app:destination="@id/homepageFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
         <action
             android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
             app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeNavigationActivity"
+            app:destination="@+id/homeNavigationActivity" />
     </fragment>
 
     <fragment
@@ -41,33 +41,11 @@
             app:destination="@id/loginFragment" />
     </fragment>
 
-    <fragment
-        android:id="@+id/homepageFragment"
-        android:name="com.example.quizgame.ui.home.HomePageFragment"
-        android:label="fragment_home_page"
-        tools:layout="@layout/fragment_home_page" >
-        <action
-            android:id="@+id/action_homepageFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
-            android:id="@+id/action_homepageFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/resultFragment"
-        android:name="com.example.quizgame.ui.home.ResultFragment"
-        android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
-
-    <fragment
-        android:id="@+id/questionFragment"
-        android:name="com.example.quizgame.ui.home.QuestionFragment"
-        android:label="fragment_question"
-        tools:layout="@layout/fragment_question" >
-        <action
-            android:id="@+id/action_questionFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
-    </fragment>
+    <activity
+        android:id="@+id/homeNavigationActivity"
+        android:name="com.example.quizgame.ui.HomeNavigationActivity"
+        android:label="activity_home_navigation"
+        tools:layout="@layout/activity_home_navigation">
+    </activity>
 
 </navigation>

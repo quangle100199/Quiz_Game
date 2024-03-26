@@ -45,7 +45,7 @@ class HomePageFragment : Fragment() {
         mFragmentHomePageBinding.signOut.setOnClickListener{
             authViewModel.signOut()
             Toast.makeText(context, "Logout Successfully", Toast.LENGTH_SHORT).show()
-            navController.navigate(R.id.action_homepageFragment_to_loginFragment)
+            navController.navigate(R.id.action_homepageFragment_to_authNavigationActivity)
         }
     }
 }
