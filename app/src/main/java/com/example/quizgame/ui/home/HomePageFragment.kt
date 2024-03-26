@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -17,12 +18,12 @@ import com.example.quizgame.viewmodel.AuthViewModel
 
 class HomePageFragment : Fragment() {
     private lateinit var mFragmentHomePageBinding: FragmentHomePageBinding
-    private lateinit var authViewModel: AuthViewModel
+    private val authViewModel: AuthViewModel by viewModels()
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        authViewModel = ViewModelProvider(this)[AuthViewModel::class.java]
+//        authViewModel = ViewModelProvider(this)[AuthViewModel::class.java]
     }
 
     override fun onCreateView(

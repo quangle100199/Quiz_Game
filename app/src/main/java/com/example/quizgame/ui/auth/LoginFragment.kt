@@ -24,7 +24,7 @@ import com.google.android.gms.common.api.ApiException
 class LoginFragment : Fragment() {
     private lateinit var mFragmentLoginBinding : FragmentLoginBinding
     private val viewModel: AuthViewModel by viewModels()
-    private lateinit var googleAuthViewModel: GoogleAuthViewModel
+    private val googleAuthViewModel: GoogleAuthViewModel by viewModels()
     private lateinit var navController: NavController
 
     val RC_SIGN_IN = 40
@@ -32,7 +32,7 @@ class LoginFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        viewModel = ViewModelProvider(this)[AuthViewModel::class.java]
-        googleAuthViewModel = ViewModelProvider(this)[GoogleAuthViewModel::class.java]
+//        googleAuthViewModel = ViewModelProvider(this)[GoogleAuthViewModel::class.java]
     }
 
     override fun onCreateView(

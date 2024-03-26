@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -16,7 +17,7 @@ import com.example.quizgame.viewmodel.ScoreViewModel
 
 class ResultFragment : Fragment() {
     private lateinit var mFragmentResultBinding : FragmentResultBinding
-    private lateinit var viewModel : ScoreViewModel
+    private val viewModel : ScoreViewModel by viewModels()
     private lateinit var navController: NavController
 
     private var correctAnswerNum : Int = 0
@@ -24,7 +25,7 @@ class ResultFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this)[ScoreViewModel::class.java]
+//        viewModel = ViewModelProvider(this)[ScoreViewModel::class.java]
     }
 
     override fun onCreateView(
