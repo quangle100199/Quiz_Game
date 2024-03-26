@@ -72,6 +72,8 @@ class LoginFragment : Fragment() {
             }
         }
 
+
+
         // Xử lý sign in với Google
         mFragmentLoginBinding.btnContinueWithGoogle.setOnClickListener {
             Log.e("signInGoogleButton", "signInGoogleButton")
